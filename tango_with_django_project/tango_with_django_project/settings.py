@@ -83,6 +83,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_PATH = os.path.join(BASE_DIR,'static')
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
 
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
@@ -93,3 +98,7 @@ TEMPLATE_DIRS = [
     # Don't forget to use absolute paths, not relative paths.
     TEMPLATE_PATH,
 ]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
